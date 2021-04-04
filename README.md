@@ -7,9 +7,11 @@ This script will iterate through all the source folders/files specified. Tar eac
 ## Config
 All configs can be made in the [backup.sh](./backup.sh)
 
-$USER: Which user on the computer should the script cd into and transfer files from.
-$SOURCE: All folders/files to transfer
-$BACKUP_PATH: Path to the external drive to backup the files to
+- **$USER**: Which user on the computer should the script cd into and transfer files from.
+
+- **$SOURCE**: All folders/files to transfer
+
+- **$BACKUP_PATH**: Path to the external drive to backup the files to
 
 
 
