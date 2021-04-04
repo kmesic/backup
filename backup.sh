@@ -38,12 +38,12 @@ echo ""
 # Loop through your source folders
 for i in "${SOURCE[@]}"
 do
-	# Set the filename where we'll put the backup TAR file
-	BACKUPFILE=$TEMPDIR/${i//\/}.tar
+    # Set the filename where we'll put the backup TAR file
+    BACKUPFILE=$TEMPDIR/${i//\/}.tar
 
     echo "Taring source: $User/$i"
-	# Create the TAR archive
-	tar -cvpf $BACKUPFILE -C $USER $i
+    # Create the TAR archive
+    tar -cvpf $BACKUPFILE -C $USER $i
     echo ""
 
     # short rsync explanation
@@ -54,9 +54,9 @@ do
     # -o = preserve owner (super-user only)
     # -g = preserve group
 
-	# Sync the TAR file to the USB disk, removing the TAR
-	# file from your main disk when finished
-	rsync -avlPog --remove-source-files "$BACKUPFILE" "$BACKUP_PATH"
+    # Sync the TAR file to the USB disk, removing the TAR
+    # file from your main disk when finished
+    rsync -avlPog --remove-source-files "$BACKUPFILE" "$BACKUP_PATH"
 
     # Untar the file and delete the tar from the backup
     echo "Untar content in Backup and remove tar file"
